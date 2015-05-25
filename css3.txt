@@ -1,0 +1,74 @@
+/*************************2015/5/25*************************/
+圆角效果:
+	border-radius
+
+阴影:
+	box-shadow : 设置 inset 为 内阴影，不设置为外阴影    以逗号隔开，添加多道阴影
+		box-shadow:5px 2px blue,2px 2px yellow inset;
+
+边框图片:
+	border-image :url( image.jpg ) 70 repeat
+
+颜色:
+	rgba( R, G, B, A )      
+
+水平渐变:
+	linear-gradient(to left, red, blue);     
+
+文字溢出时显示省略号 ： 
+     text-overflow : ellipsis;
+     overflow : hidden;
+     white-space : nowrap;
+
+嵌入文字 @font-face {
+     font-family : 字体名称；
+     src : 地址；
+}
+
+文本阴影 :
+	text-shadow : x-offset y-offset blur color;
+
+设置元素背景图片的原始起始位置 ： 
+	background-orgin : border-box | padding-box | content-box;     需要背景为no-repeat
+
+对背景图片裁剪：
+	background-clip : border-box | padding-box | content-box | no-clip
+
+背景图片大小：
+	background-size : auto | <长度值> | <百分比> | cover覆盖 | contain容纳
+
+使用线性渐变 为元素添加分割线 ： 
+	background : linear-gradient(to bottom, black, black) no-repeat right / 1px 15px ;
+
+属性选择器：E[att^/$/*="val"]{}
+
+结构性伪类选择器：
+	:root	// 根选择器		:root{}
+	:not	// 否定选择器	div:not([id="node"]){}
+	:empty	// 空选择器		p:empty{}
+	:target	// 目标选择器	
+		<a href="#brand">brand</a>
+		<p id="brand">brand page</p>
+
+		#brand:target{
+			// something;
+		}
+	:first-child
+	:last-child
+	:nth-child(n)	// n从1开始，可以接受表达式	p:nth-child(2n){},当表达式中n取0使表达式>=0时，n可以取0，
+						即2n+1 与 2n-1等效
+	:nth-last-child(n)
+	:first-of-type		// 某类型的第一个子元素
+	:nth-of-type(n)
+	:last-of-type
+	:nth-last-of-type(n)
+	:only-child	// 父元素中仅有一个子元素才会被匹配
+	:only-of-type	// 父元素中仅有一个这种类型的子元素才会被匹配
+
+
+
+
+
+
+
+
