@@ -1,10 +1,11 @@
 /*************************2015/5/25*************************/
 圆角效果:
-	border-radius
+	border-radius	使用 X / Y 设置 x轴与y轴半径
+		border-radius : 20% 30% 80% 10% / 10% 50% 10% 11%
 
 阴影:
 	box-shadow : 设置 inset 为 内阴影，不设置为外阴影    以逗号隔开，添加多道阴影
-		box-shadow:5px 2px blue,2px 2px yellow inset;
+		box-shadow:5px 2px blue, 2px 2px yellow inset;
 
 边框图片:
 	border-image :url( image.jpg ) 70 repeat
@@ -65,10 +66,43 @@
 	:only-child	// 父元素中仅有一个子元素才会被匹配
 	:only-of-type	// 父元素中仅有一个这种类型的子元素才会被匹配
 
+/**********************2015/5/26***********************************/
+	:enabled	// 表单元素
+	:disabled
+	:checked
+	::selection	// 匹配突出显示的文本	FF需要添加前缀::-moz-selection
+	:read-only	// 指定处于只读状态的样式	FF需要添加前缀::-moz-read-only
+	:read-write	// 指定非只读状态的样式	FF需要添加前缀::-moz-read-only
+	::before,::after	// 为元素的前面、后面插入内容，常和"content"配合使用
+		使用两个投影，使投影效果加强
 
+transparent // 断点，透明
+display:flex	????
 
+变形：
+	transform：
+		rotate(  deg)	// 旋转，相对原点，正值顺时针，负值逆时针
+		skew(x, y)  skewX(x)  shewY(y) // 扭曲，使元素按角度倾斜显示，会改变元素形状
+		scaleI(x, y) scaleX(x) scaleY(y) // 缩放，按倍率缩放
+		translate(x, y) translateX(x) translateY(y) // 位移，不影响其他组件
+		matrix(a,b,c,d,e,f)	// 矩阵，对元素重新定位
+	transform-origin:	//原点，默认是元素X轴Y轴50%处，传入关键词（top/bottom/left/right）或者百分比
 
+	transition-property	// 指定过渡动画的CSS属性名称，可以设置all
+	transition-duration	// 从旧状态到新状态的持续时间
+	transition-timing-function	// 过渡函数
+		ease:由快到慢	linear:恒速		ease-in:渐显	ease-out:渐隐	ease-in-out:渐显渐隐
+	transition-delay	// 过渡延迟时间
+	transition:property duration timing-function delay;
 
-
-
-
+	keyframes	// 关键帧
+		@keyframes aniName{
+			0%{}
+			10%{}
+			100%{}
+		}
+		animation:aniName duration timing-function delay;
+	animation-name: none | IDENT
+	animation-duration
+	animation-timing-function
+	animation-delay
